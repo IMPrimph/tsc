@@ -2,12 +2,11 @@ import { User } from "./User";
 import { Company } from "./Company";
 /// <reference types="@types/google.maps" />
 
-const map = document.getElementById('map') as HTMLElement
+import { CustomMap } from "./CustomMap";
 
-new google.maps.Map(map, {
-    zoom: 1,
-    center: {
-        lat: 0,
-        lng: 0
-    }
-})
+const customMap = new CustomMap('map')
+
+const user = new User()
+const company = new Company()
+customMap.addMarker(user)
+customMap.addMarker(company)
