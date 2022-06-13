@@ -1,9 +1,13 @@
 import { User } from "./User";
 import { Company } from "./Company";
+/// <reference types="@types/google.maps" />
 
-const user = new User()
+const map = document.getElementById('map') as HTMLElement
 
-console.log(user)
-
-const company = new Company()
-console.log(company)
+new google.maps.Map(map, {
+    zoom: 1,
+    center: {
+        lat: 0,
+        lng: 0
+    }
+})
