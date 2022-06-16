@@ -2,8 +2,7 @@ import fs from 'fs'
 import { CSVFileReader } from './CSVFileReader'
 
 const reader = new CSVFileReader('football.csv')
-
-const matches = reader.read()
+reader.read()
 
 
 // use enums when we know all possible outcomes
